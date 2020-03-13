@@ -1,0 +1,85 @@
+{
+  "name": "Spotifly",
+  "description": "An always-on-top Spotify Mini Player",
+  "version": "0.1.0",
+  "private": true,
+  "author": "shaneboyar",
+  "homepage": "./",
+  "build": {
+    "appId": "com.mysteriumcosmographicum.spotifly",
+    "productName": "Spotifly",
+    "copyright": "Copyright © 2020 Shane Boyar",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "target": "portable",
+      "icon": "assets/app.ico"
+    },
+    "mac": {
+      "icon": "assets/icons/icon.icns"
+    }
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-brands-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "@types/react-router-dom": "^5.1.3",
+    "dotenv": "^8.2.0",
+    "electron-is-dev": "^1.1.0",
+    "node-sass": "^4.13.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-feather": "^2.0.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.0.1",
+    "typescript": "^3.8.3"
+  },
+  "repository": {
+    "url": "https://github.com/shaneboyar/spotifly.git"
+  },
+  "scripts": {
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test --env=jsdom",
+    "react-eject": "react-scripts eject",
+    "react-prebuild": "cross-env cp ../main/src/*.js public/",
+    "electron-build": "electron-builder",
+    "release": "npm run react-prebuild && npm run react-build && electron-builder --publish=always",
+    "build": "npm run react-prebuild && npm run react-build && npm run electron-build",
+    "start": "cross-env BROWSER=none npm run react-start"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/jest": "24.0.15",
+    "@types/node": "12.0.10",
+    "@types/react": "16.8.22",
+    "@types/react-dom": "16.8.4",
+    "concurrently": "^4.1.1",
+    "cross-env": "^5.2.0",
+    "electron": "7.1.13",
+    "electron-builder": "^22.4.0",
+    "electron-reload": "^1.4.0",
+    "wait-on": "^3.2.0",
+    "watch": "^1.0.2"
+  }
+}

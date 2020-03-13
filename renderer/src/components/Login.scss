@@ -1,0 +1,26 @@
+#loginContainer {
+  background: #56ab2f; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #a8e063, #56ab2f); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #a8e063,
+    #56ab2f
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  align-items: center;
+  #connectButton {
+    background: rgba($color: #fafafa, $alpha: 0.4);
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border: 1px solid #fafafa;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    border-radius: 25px;
+    &:active {
+      border: none;
+    }
+    svg {
+      margin-right: 8px;
+    }
+  }
+}
