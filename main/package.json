@@ -1,13 +1,13 @@
 {
-  "name": "electron-react-ts-starter",
-  "version": "1.0.0",
+  "name": "Spotifly",
+  "version": "0.1.1",
   "main": "./src/electron.js",
   "scripts": {
     "start": "npm-run-all --parallel tsc electron:watch",
     "tsc": "tsc ./src/electron.ts -w",
     "electron:watch": "cross-env NODE_ENV=dev nodemon --exec 'wait-on http://localhost:3000 && electron src/electron.js'"
   },
-  "author": "nateshmbhat",
+  "author": "shaneboyar",
   "dependencies": {
     "electron": "7.1.13"
   },
