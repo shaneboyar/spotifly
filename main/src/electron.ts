@@ -70,7 +70,7 @@ const createWindow = async () => {
   });
 
   mainWindow.webContents.once("dom-ready", () => {
-    mainWindow.webContents.openDevTools({ mode: "detach" });
+    isDev && mainWindow.webContents.openDevTools({ mode: "detach" });
   });
 };
 
