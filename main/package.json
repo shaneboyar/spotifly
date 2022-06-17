@@ -9,7 +9,7 @@
   },
   "author": "shaneboyar",
   "dependencies": {
-    "electron": "7.1.13"
+    "electron": "15.5.5"
   },
   "devDependencies": {
     "@types/electron": "^1.6.10",
